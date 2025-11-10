@@ -1,0 +1,9 @@
+.campo {
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+      margin-bottom: .75rem;
+    }
+    input {
+      padding: .4rem .5rem;
+    }

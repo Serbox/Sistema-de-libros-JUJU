@@ -1,0 +1,35 @@
+    <h2 mat-dialog-title>Editar libro</h2>
+
+    <form [formGroup]="form" mat-dialog-content>
+      <div class="campo">
+        <label>Título</label>
+        <input type="text" formControlName="Titulo" />
+      </div>
+
+      <div class="campo">
+        <label>Autor</label>
+        <input type="text" formControlName="Autor" />
+      </div>
+
+      <div class="campo">
+        <label>Año</label>
+        <input type="text" formControlName="Ano_public" />
+      </div>
+
+        <div class="campo">
+            <label>Estado</label>
+            <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-select formControlName="estado">
+                <mat-option [value]="1">Disponible</mat-option>
+                <mat-option [value]="2">Reservado</mat-option>
+            </mat-select>
+            </mat-form-field>
+        </div>
+    </form>
+
+    <div mat-dialog-actions align="end">
+      <button mat-button mat-dialog-close>Cancelar</button>
+      <button mat-raised-button color="primary" (click)="actualizar()" [disabled]="form.invalid">
+        Actualizar
+      </button>
+    </div>

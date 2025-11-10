@@ -1,0 +1,15 @@
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+  }
+  .form-cusmtome {
+    min-width: 150px;
+    width: 100%;
+
+  }
+
+  .input-cusmtom {
+    width: 100%;
+  }

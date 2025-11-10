@@ -1,0 +1,33 @@
+<h2 mat-dialog-title>Nuevo libro</h2>
+
+<form [formGroup]="form" mat-dialog-content>
+  <mat-form-field appearance="outline" style="width: 100%;">
+    <mat-label>Título</mat-label>
+    <input matInput formControlName="Titulo" />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" style="width: 100%;">
+    <mat-label>Autor</mat-label>
+    <input matInput formControlName="Autor" />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" style="width: 100%;">
+    <mat-label>Año</mat-label>
+    <input matInput formControlName="Ano_public" />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" style="width: 100%;">
+    <mat-label>Estado</mat-label>
+    <mat-select formControlName="estado">
+      <mat-option [value]="1">Disponible</mat-option>
+      <mat-option [value]="2">Reservado</mat-option>
+    </mat-select>
+  </mat-form-field>
+</form>
+
+<div mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancelar</button>
+  <button mat-raised-button color="primary" (click)="guardar()" [disabled]="form.invalid">
+    Guardar  
+  </button>
+</div>
